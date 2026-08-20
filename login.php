@@ -1,3 +1,8 @@
+<?php
+session_start();
+include 'conexao.php';
+?>
+
 <?php include 'cabecalho.php'; ?>
 
 <?php
@@ -9,10 +14,17 @@
         $sql = "SELECT * FROM usuarios WHERE email = '$email' AND senha ='$senha'";
         $resultado = mysqli_query($conexao, $sql);
         if (mysqli_num_rows($resultado) == 1) {
-            $mensagem = "Login realizado com sucesso!";
+            $usuario = mysqli_fetch_assoc($resultado);
+
+            $_SESSION['usuario_id'] = $usuario['id'];
+            $_SESSION['usuario_nome'] = $usuario['nome'];
+
+        header("Location: produtos/listar.php");
+            exit;
         } else {
             $mensagem = "E-mail ou senha inválidos.";
         }
+
     }
 ?>
 
