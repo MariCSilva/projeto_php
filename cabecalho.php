@@ -1,3 +1,7 @@
+<?php
+    $base_url = '/projeto_php/';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
