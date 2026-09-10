@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 03-Set-2026 às 16:36
+-- Tempo de geração: 10-Set-2026 às 16:31
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.1.2
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `sistema_produtos`
 --
+CREATE DATABASE IF NOT EXISTS `sistema_produtos` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `sistema_produtos`;
 
 -- --------------------------------------------------------
 
@@ -43,7 +45,7 @@ INSERT INTO `produtos` (`id`, `nome`, `descricao`, `preco`, `quantidade`) VALUES
 (1, 'caneta azul', 'caneta esferográfica azul', '1.00', 700),
 (2, 'borracha ', 'borracha banca', '1.30', 800),
 (3, 'lápis faber-castell', 'lapis preto de escrever faber-castell', '1.50', 300),
-(4, 'apontador oval', 'oval apontador com depósito preto', '4.40', 250);
+(4, 'apontador oval', 'oval apontador com depósito preto', '4.40', 300);
 
 -- --------------------------------------------------------
 
